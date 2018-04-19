@@ -1,0 +1,33 @@
+04-19 15:28:52.892 24914-24914/com.example.kuldeep.openpose V/BoostFramework: BoostFramework() : mPerf = com.qualcomm.qti.Performance@ea40a8f
+04-19 15:28:52.904 24914-24914/com.example.kuldeep.openpose I/Timeline: Timeline: Activity_launch_request time:104388863 intent:Intent { act=android.intent.action.CHOOSER (has extras) }
+04-19 15:28:58.669 24914-24914/com.example.kuldeep.openpose I/HE: content://com.android.providers.media.documents/document/image%3A57143
+04-19 15:28:58.772 24914-24928/com.example.kuldeep.openpose I/art: Background sticky concurrent mark sweep GC freed 25832(1751KB) AllocSpace objects, 5(188KB) LOS objects, 0% free, 215MB/215MB, paused 6.809ms total 91.695ms
+04-19 15:29:03.615 24914-24914/com.example.kuldeep.openpose D/DEBUG_CAMERA: content://com.android.providers.media.documents/document/image%3A57143
+04-19 15:29:06.091 24914-24914/com.example.kuldeep.openpose D/DEBUG: 480 640 Mat [ 480*640*CV_8UC4, isCont=true, isSubmat=false, nativeObj=0x7f8a644be0, dataAddr=0x7f8920c000 ]
+04-19 15:29:06.105 24914-24914/com.example.kuldeep.openpose D/See Hererere: -1 -1 1
+04-19 15:29:07.180 24914-24914/com.example.kuldeep.openpose E/cv::error(): OpenCV(3.4.1) Error: Assertion failed (inputs[0]->size[1] % blobs[0].size[1] == 0) in virtual void cv::dnn::ConvolutionLayerImpl::forward(std::vector<cv::Mat*>&, std::vector<cv::Mat>&, std::vector<cv::Mat>&), file /build/master_pack-android/opencv/modules/dnn/src/layers/convolution_layer.cpp, line 962
+04-19 15:29:07.755 24914-24914/com.example.kuldeep.openpose E/org.opencv.dnn: dnn::forward_11() caught cv::Exception: OpenCV(3.4.1) /build/master_pack-android/opencv/modules/dnn/src/layers/convolution_layer.cpp:962: error: (-215) inputs[0]->size[1] % blobs[0].size[1] == 0 in function virtual void cv::dnn::ConvolutionLayerImpl::forward(std::vector<cv::Mat*>&, std::vector<cv::Mat>&, std::vector<cv::Mat>&)
+04-19 15:29:07.758 24914-24914/com.example.kuldeep.openpose D/AndroidRuntime: Shutting down VM
+04-19 15:29:07.767 24914-24914/com.example.kuldeep.openpose E/AndroidRuntime: FATAL EXCEPTION: main
+                                                                              Process: com.example.kuldeep.openpose, PID: 24914
+                                                                              java.lang.RuntimeException: Failure delivering result ResultInfo{who=null, request=8866, result=-1, data=Intent { dat=content://com.android.providers.media.documents/document/image:57143 flg=0x1 }} to activity {com.example.kuldeep.openpose/com.example.kuldeep.openpose.MainActivity}: CvException [org.opencv.core.CvException: cv::Exception: OpenCV(3.4.1) /build/master_pack-android/opencv/modules/dnn/src/layers/convolution_layer.cpp:962: error: (-215) inputs[0]->size[1] % blobs[0].size[1] == 0 in function virtual void cv::dnn::ConvolutionLayerImpl::forward(std::vector<cv::Mat*>&, std::vector<cv::Mat>&, std::vector<cv::Mat>&)
+                                                                              ]
+                                                                                  at android.app.ActivityThread.deliverResults(ActivityThread.java:4196)
+                                                                                  at android.app.ActivityThread.handleSendResult(ActivityThread.java:4239)
+                                                                                  at android.app.ActivityThread.-wrap20(ActivityThread.java)
+                                                                                  at android.app.ActivityThread$H.handleMessage(ActivityThread.java:1599)
+                                                                                  at android.os.Handler.dispatchMessage(Handler.java:102)
+                                                                                  at android.os.Looper.loop(Looper.java:165)
+                                                                                  at android.app.ActivityThread.main(ActivityThread.java:6365)
+                                                                                  at java.lang.reflect.Method.invoke(Native Method)
+                                                                                  at com.android.internal.os.ZygoteInit$MethodAndArgsCaller.run(ZygoteInit.java:883)
+                                                                                  at com.android.internal.os.ZygoteInit.main(ZygoteInit.java:773)
+                                                                               Caused by: CvException [org.opencv.core.CvException: cv::Exception: OpenCV(3.4.1) /build/master_pack-android/opencv/modules/dnn/src/layers/convolution_layer.cpp:962: error: (-215) inputs[0]->size[1] % blobs[0].size[1] == 0 in function virtual void cv::dnn::ConvolutionLayerImpl::forward(std::vector<cv::Mat*>&, std::vector<cv::Mat>&, std::vector<cv::Mat>&)
+                                                                              ]
+                                                                                  at org.opencv.dnn.Net.forward_1(Native Method)
+                                                                                  at org.opencv.dnn.Net.forward(Net.java:60)
+                                                                                  at com.example.kuldeep.openpose.MainActivity.onActivityResult(MainActivity.java:147)
+                                                                                  at android.app.Activity.dispatchActivityResult(Activity.java:7111)
+                                                                                  at android.app.ActivityThread.deliverResults(ActivityThread.java:4192)
+                                                                                  	... 9 more
+04-19 15:29:07.816 24914-24914/com.example.kuldeep.openpose I/Process: Sending signal. PID: 24914 SIG: 9
